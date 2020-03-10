@@ -37,6 +37,10 @@
             this.Folder_select = new System.Windows.Forms.Button();
             this.txtfolder = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this._Extarct = new System.Windows.Forms.Button();
+            this.Zipfile = new System.Windows.Forms.Button();
+            this.txtzip = new System.Windows.Forms.TextBox();
+            this.ziplabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // File_zip
@@ -61,7 +65,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(70, 65);
+            this.progressBar1.Location = new System.Drawing.Point(70, 100);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(304, 29);
             this.progressBar1.TabIndex = 16;
@@ -118,11 +122,49 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Folder";
             // 
+            // _Extarct
+            // 
+            this._Extarct.Location = new System.Drawing.Point(417, 66);
+            this._Extarct.Name = "_Extarct";
+            this._Extarct.Size = new System.Drawing.Size(57, 23);
+            this._Extarct.TabIndex = 22;
+            this._Extarct.Text = "Extract_file";
+            this._Extarct.UseVisualStyleBackColor = true;
+            // 
+            // Zipfile
+            // 
+            this.Zipfile.Location = new System.Drawing.Point(380, 66);
+            this.Zipfile.Name = "Zipfile";
+            this.Zipfile.Size = new System.Drawing.Size(31, 22);
+            this.Zipfile.TabIndex = 21;
+            this.Zipfile.Text = "....";
+            this.Zipfile.UseVisualStyleBackColor = true;
+            // 
+            // txtzip
+            // 
+            this.txtzip.Location = new System.Drawing.Point(70, 65);
+            this.txtzip.Multiline = true;
+            this.txtzip.Name = "txtzip";
+            this.txtzip.Size = new System.Drawing.Size(304, 23);
+            this.txtzip.TabIndex = 20;
+            // 
+            // ziplabel
+            // 
+            this.ziplabel.Location = new System.Drawing.Point(3, 66);
+            this.ziplabel.Name = "ziplabel";
+            this.ziplabel.Size = new System.Drawing.Size(61, 22);
+            this.ziplabel.TabIndex = 19;
+            this.ziplabel.Text = "Zip";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 99);
+            this.ClientSize = new System.Drawing.Size(475, 141);
+            this.Controls.Add(this._Extarct);
+            this.Controls.Add(this.Zipfile);
+            this.Controls.Add(this.txtzip);
+            this.Controls.Add(this.ziplabel);
             this.Controls.Add(this.File_zip);
             this.Controls.Add(this.Folder_zip);
             this.Controls.Add(this.progressBar1);
@@ -150,5 +192,9 @@
         private System.Windows.Forms.Button Folder_select;
         private System.Windows.Forms.TextBox txtfolder;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button _Extarct;
+        private System.Windows.Forms.Button Zipfile;
+        private System.Windows.Forms.TextBox txtzip;
+        private System.Windows.Forms.Label ziplabel;
     }
 }

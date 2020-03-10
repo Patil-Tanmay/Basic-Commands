@@ -60,6 +60,7 @@ namespace _Zip
                     System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(path);
                     zip.SaveProgress += Zip_SaveProgress;
                     zip.Save(string.Format("{0}{1}.zip", di.Parent.FullName, di.Name));
+                    
                 }
 
             })
@@ -68,15 +69,14 @@ namespace _Zip
         }
 
         private void Zip_SaveProgress(object sender, SaveProgressEventArgs e)
-        {
+        {  
             if (e.EventType == Ionic.Zip.ZipProgressEventType.Saving_BeforeWriteEntry)
-            {
+            {   
                 progressBar1.Invoke(new MethodInvoker(delegate
                 {
                     progressBar1.Maximum = e.EntriesTotal;
                     progressBar1.Value = e.EntriesSaved + 1;
                     progressBar1.Update();
-                   
                 }
                 ));
             }
