@@ -1,0 +1,9 @@
+c:\users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\BasicCommands.exe
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\BasicCommands.exe.config
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.Form1.resources
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.Properties.Resources.resources
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.csproj.GenerateResource.Cache
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.exe
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.pdb
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.csprojResolveAssemblyReference.cache
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\BasicCommands.pdb
