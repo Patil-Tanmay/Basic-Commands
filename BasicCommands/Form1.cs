@@ -27,9 +27,6 @@ namespace BasicCommands
         {
             InitializeComponent();
 
-            _deleteworker.WorkerSupportsCancellation = true;
-            _deleteworker.WorkerReportsProgress = true;
-            _deleteworker.ProgressChanged += worker_progresschanged;
 
             _copyWorker.WorkerSupportsCancellation = true;
             _moveWorker.WorkerSupportsCancellation = true;
@@ -43,17 +40,14 @@ namespace BasicCommands
            
             _copyWorker.DoWork += copywork;
             _moveWorker.DoWork += movework;
-            _deleteworker.DoWork += deletework;
+            
         }
         //used in copy_click button
         string copy_s;
         //used in move click button
         string move_s;
         //calling move function inn here so that value of progrssbar gets changed accordingly 
-        private void deletework(object sender,DoWorkEventArgs e)
-        {
-            delete_f(textBox1.Text);
-        }
+       
         private void movework(object sender,DoWorkEventArgs e)
         {
             move(textBox1.Text,move_s);
@@ -188,8 +182,8 @@ namespace BasicCommands
         {
             this.MinimumSize = new System.Drawing.Size(361, 305);
         }
-       //resizing the form size according to my conditions
-       //firat i set the tabcontrol's property to dock then i changed the form size 
+        //resizing the form size according to my conditions
+        //furhter i set the tabcontrol's property to dock then i changed the form size 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
@@ -206,23 +200,21 @@ namespace BasicCommands
             
 
         }
-        public void delete_f(string source)
-        {
-            FileInfo fi = new FileInfo(textBox1.Text);
-            long size = fi.Length;
-            System.IO.File.Delete(textBox1.Text);
-                
-            
-
-        }
+     
         private void FIle_delete_Click(object sender, EventArgs e)
         {
-            //if (System.IO.File.Exists(textBox1.Text))
-            // {
-            //  System.IO.File.Delete(textBox1.Text);
-            //}
-            _deleteworker.RunWorkerAsync();
+            if (System.IO.File.Exists(textBox1.Text))
+             {
+              System.IO.File.Delete(textBox1.Text);
+            }
            
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _Zip.Form2 f = new _Zip.Form2();  
+            f.ShowDialog();
         }
     }
 }

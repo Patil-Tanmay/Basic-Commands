@@ -37,8 +37,10 @@
             this.Move = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.FIle_delete = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Extraction = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +121,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Extraction);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.FIle_delete);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label2);
@@ -135,15 +139,15 @@
             this.tabPage1.Text = "Basic Functions";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // button1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(333, 253);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Powershell ";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(6, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Zip";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FIle_delete
             // 
@@ -154,6 +158,25 @@
             this.FIle_delete.Text = "Delete";
             this.FIle_delete.UseVisualStyleBackColor = true;
             this.FIle_delete.Click += new System.EventHandler(this.FIle_delete_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(333, 232);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Powershell ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Extraction
+            // 
+            this.Extraction.Location = new System.Drawing.Point(121, 155);
+            this.Extraction.Name = "Extraction";
+            this.Extraction.Size = new System.Drawing.Size(73, 30);
+            this.Extraction.TabIndex = 10;
+            this.Extraction.Text = "Extract";
+            this.Extraction.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -168,7 +191,6 @@
             this.MaximumSizeChanged += new System.EventHandler(this.Form1_MaximumSizeChanged);
             this.MinimumSizeChanged += new System.EventHandler(this.Form1_MinimumSizeChanged);
             this.Load += new System.EventHandler(this.Form1_Load);
-          
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -189,6 +211,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button FIle_delete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Extraction;
     }
 }
 

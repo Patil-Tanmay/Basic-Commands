@@ -7,3 +7,7 @@ C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands
 C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.pdb
 C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\BasicCommands.csprojResolveAssemblyReference.cache
 C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\BasicCommands.pdb
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\DotNetZip.dll
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\DotNetZip.pdb
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\bin\Debug\DotNetZip.xml
+C:\Users\tanma\documents\visual studio 2017\Projects\BasicCommands\BasicCommands\obj\Debug\_Zip.Form2.resources
