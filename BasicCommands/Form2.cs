@@ -120,6 +120,49 @@ namespace _Zip
             }
         }
 
-     
+        private void _Extarct_Click(object sender, EventArgs e)
+        {
+            if (txtzip.Text == null)
+            {
+                MessageBox.Show("Please select a proper file", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtzip.Focus();
+                Zipfile.Focus();
+            }
+            else
+            {
+                using (ZipFile zip = ZipFile.Read(txtzip.Text))
+                {
+                    FileInfo fi = new FileInfo(txtzip.Text);
+                    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(txtzip.Text);
+                    Directory.CreateDirectory(filePath);
+                    zip.ExtractProgress +=
+                       new EventHandler<ExtractProgressEventArgs>(zip_ExtractProgress);
+                    zip.ExtractAll(filePath, ExtractExistingFileAction.OverwriteSilently);
+
+                }
+            }
+
+        }
+
+        private void zip_ExtractProgress(object sender, ExtractProgressEventArgs e)
+        {
+            if (e.TotalBytesToTransfer > 0)
+            {
+               progressBar1.Maximum = 100;
+                progressBar1.Value = Convert.ToInt32(100 * e.BytesTransferred / e.TotalBytesToTransfer);
+               progressBar1.Update();
+            }
+        }
+        string filePath;
+        private void Zipfile_Click(object sender, EventArgs e)
+        { 
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Zip Files|*.zip*";
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                txtzip.Text = fd.FileName;
+                filePath = fd.FileName.Replace(".zip","_");            
+            }
+        }
     }
 }

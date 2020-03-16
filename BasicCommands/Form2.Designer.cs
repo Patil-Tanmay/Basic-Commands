@@ -47,7 +47,7 @@
             // 
             this.File_zip.Location = new System.Drawing.Point(417, 37);
             this.File_zip.Name = "File_zip";
-            this.File_zip.Size = new System.Drawing.Size(57, 23);
+            this.File_zip.Size = new System.Drawing.Size(62, 23);
             this.File_zip.TabIndex = 18;
             this.File_zip.Text = "Zip";
             this.File_zip.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             // 
             this.Folder_zip.Location = new System.Drawing.Point(417, 9);
             this.Folder_zip.Name = "Folder_zip";
-            this.Folder_zip.Size = new System.Drawing.Size(57, 22);
+            this.Folder_zip.Size = new System.Drawing.Size(62, 22);
             this.Folder_zip.TabIndex = 17;
             this.Folder_zip.Text = "Zip";
             this.Folder_zip.UseVisualStyleBackColor = true;
@@ -126,10 +126,11 @@
             // 
             this._Extarct.Location = new System.Drawing.Point(417, 66);
             this._Extarct.Name = "_Extarct";
-            this._Extarct.Size = new System.Drawing.Size(57, 23);
+            this._Extarct.Size = new System.Drawing.Size(62, 23);
             this._Extarct.TabIndex = 22;
             this._Extarct.Text = "Extract_file";
             this._Extarct.UseVisualStyleBackColor = true;
+            this._Extarct.Click += new System.EventHandler(this._Extarct_Click);
             // 
             // Zipfile
             // 
@@ -139,9 +140,11 @@
             this.Zipfile.TabIndex = 21;
             this.Zipfile.Text = "....";
             this.Zipfile.UseVisualStyleBackColor = true;
+            this.Zipfile.Click += new System.EventHandler(this.Zipfile_Click);
             // 
             // txtzip
             // 
+            this.txtzip.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtzip.Location = new System.Drawing.Point(70, 65);
             this.txtzip.Multiline = true;
             this.txtzip.Name = "txtzip";
@@ -160,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 141);
+            this.ClientSize = new System.Drawing.Size(481, 141);
             this.Controls.Add(this._Extarct);
             this.Controls.Add(this.Zipfile);
             this.Controls.Add(this.txtzip);
