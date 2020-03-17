@@ -13,7 +13,6 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading;
 
-
 namespace BasicCommands
 {
     public partial class Form1 : Form   
@@ -141,8 +140,6 @@ namespace BasicCommands
               copy_s=  Path.Combine(fdb.SelectedPath,Path.GetFileName(textBox1.Text));
                 _copyWorker.RunWorkerAsync();
             }
-       
-      
         }
         //funtion to move file
         public void move(string source,string des)
@@ -163,7 +160,6 @@ namespace BasicCommands
                 move_s = Path.Combine(fdb.SelectedPath, Path.GetFileName(textBox1.Text));
                 MessageBox.Show(""+move_s);
                 _moveWorker.RunWorkerAsync();
-
             }
            
         }
@@ -189,13 +185,13 @@ namespace BasicCommands
            
             if (tabControl1.SelectedTab == tabPage2)
             {
-                this.Width= this.Width + 100;
-                this.Height= this.Height + 100;
+                this.Width= this.Width + 300;
+                this.Height= this.Height + 300;
             }
             else
             {
-                this.Width = this.Width - 100;
-                this.Height = this.Height - 100;
+                this.Width = this.Width - 300;
+                this.Height = this.Height - 300;
             }
             
 
@@ -215,6 +211,12 @@ namespace BasicCommands
         {
             _Zip.Form2 f = new _Zip.Form2();  
             f.ShowDialog();
+        }
+ 
+        private void btnrun_Click(object sender, EventArgs e)
+        {
+            txtoutput.Clear();
+            txtoutput.Text=  Execute("powershell.exe",txtinput.Text);
         }
     }
 }
